@@ -9,6 +9,13 @@ public final class facteursPremiers {
         // Classe utilitaire : pas d'instanciation
     }
 
+    /**
+     * Décompose un entier en produit de facteurs premiers.
+     *
+     * @param nombre l'entier à décomposer (> 0)
+     * @return la liste croissante des facteurs premiers de nombre,
+     *         vide si nombre vaut 1
+     */
     public static List<Integer> generate(int nombre) {
         List<Integer> facteurs = new ArrayList<>();
         int reste = nombre;
