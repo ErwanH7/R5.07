@@ -12,12 +12,13 @@ public final class facteursPremiers {
     public static List<Integer> generate(int nombre) {
         List<Integer> facteurs = new ArrayList<>();
         int reste = nombre;
-        while (reste % 2 == 0) {
-            facteurs.add(2);
-            reste = reste / 2;
-        }
-        if (reste > 1) {
-            facteurs.add(reste);
+        int diviseur = 2;
+        while (reste > 1) {
+            while (reste % diviseur == 0) {
+                facteurs.add(diviseur);
+                reste = reste / diviseur;
+            }
+            diviseur++;
         }
         return facteurs;
     }

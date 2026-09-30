@@ -67,4 +67,14 @@ class FacteursPremiersTest {
         // THEN
         assertThat(facteurs).containsExactly(2, 2, 2);
     }
+
+    @Test
+    void generate_de_9_devrait_retourner_3_3() {
+        // GIVEN
+        // WHEN
+        List<Integer> facteurs = facteursPremiers.generate(9);
+
+        // THEN
+        assertThat(facteurs).containsExactly(3, 3);
+    }
 }
