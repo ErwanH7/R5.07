@@ -1,5 +1,5 @@
 package com.erwan.personnage;
 
 public enum Orientation {
-    NORD
+    NORD, EST
 }
