@@ -9,11 +9,11 @@ public enum Orientation {
     /**
      * Calcule l'orientation obtenue après un certain nombre de quarts de tour.
      *
-     * @param quartsDeTour nombre de quarts de tour dans le sens horaire
+     * @param quartsDeTour nombre de quarts de tour (positif = sens horaire, négatif = sens inverse)
      * @return la nouvelle orientation
      */
     public Orientation apresQuartsDeTour(int quartsDeTour) {
         Orientation[] orientations = values();
-        return orientations[(ordinal() + quartsDeTour) % orientations.length];
+        return orientations[Math.floorMod(ordinal() + quartsDeTour, orientations.length)];
     }
 }

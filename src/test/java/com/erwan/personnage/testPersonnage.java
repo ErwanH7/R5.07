@@ -102,4 +102,16 @@ class PersonnageTest {
         // THEN
         assertThat(orientation).isEqualTo(Orientation.SUD);
     }
+
+    @Test
+    void tourner_moins_1_fois_depuis_nord_devrait_retourner_ouest() {
+        // GIVEN
+        Personnage personnage = new Personnage();
+
+        // WHEN
+        Orientation orientation = personnage.tourner(-1);
+
+        // THEN
+        assertThat(orientation).isEqualTo(Orientation.OUEST);
+    }
 }
