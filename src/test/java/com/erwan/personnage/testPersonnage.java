@@ -65,4 +65,16 @@ class PersonnageTest {
         // THEN
         assertThat(orientation).isEqualTo(Orientation.NORD);
     }
+
+    @Test
+    void tourner_5_fois_depuis_nord_devrait_retourner_est() {
+        // GIVEN
+        Personnage personnage = new Personnage();
+
+        // WHEN
+        Orientation orientation = personnage.tourner(5);
+
+        // THEN
+        assertThat(orientation).isEqualTo(Orientation.EST);
+    }
 }
