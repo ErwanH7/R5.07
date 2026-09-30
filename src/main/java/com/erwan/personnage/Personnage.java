@@ -9,7 +9,8 @@ public class Personnage {
     }
 
     public Orientation tourner(int fois) {
-        orientation = Orientation.values()[fois % 4];
+        Orientation[] orientations = Orientation.values();
+        orientation = orientations[fois % orientations.length];
         return orientation;
     }
 }
