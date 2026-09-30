@@ -77,4 +77,13 @@ class FacteursPremiersTest {
         // THEN
         assertThat(facteurs).containsExactly(3, 3);
     }
+
+    @Test
+    void generate_de_180180_devrait_retourner_tous_ses_facteurs_premiers() {
+        // WHEN
+        List<Integer> facteurs = facteursPremiers.generate(180180);
+
+        // THEN
+        assertThat(facteurs).containsExactly(2, 2, 3, 3, 5, 7, 11, 13);
+    }
 }
