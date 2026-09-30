@@ -2,11 +2,14 @@ package com.erwan.personnage;
 
 public class Personnage {
 
+    private Orientation orientation = Orientation.NORD;
+
     public Orientation getOrientation() {
-        return Orientation.NORD;
+        return orientation;
     }
 
     public Orientation tourner(int fois) {
-        return Orientation.EST;
+        orientation = Orientation.values()[fois];
+        return orientation;
     }
 }

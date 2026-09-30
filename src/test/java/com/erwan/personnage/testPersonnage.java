@@ -29,4 +29,16 @@ class PersonnageTest {
         // THEN
         assertThat(orientation).isEqualTo(Orientation.EST);
     }
+
+    @Test
+    void tourner_2_fois_depuis_nord_devrait_retourner_sud() {
+        // GIVEN
+        Personnage personnage = new Personnage();
+
+        // WHEN
+        Orientation orientation = personnage.tourner(2);
+
+        // THEN
+        assertThat(orientation).isEqualTo(Orientation.SUD);
+    }
 }
