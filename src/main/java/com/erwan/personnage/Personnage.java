@@ -10,7 +10,8 @@ public class Personnage {
 
     public Orientation tourner(int fois) {
         Orientation[] orientations = Orientation.values();
-        orientation = orientations[fois % orientations.length];
+        int nouvelIndice = (orientation.ordinal() + fois) % orientations.length;
+        orientation = orientations[nouvelIndice];
         return orientation;
     }
 }
