@@ -50,10 +50,21 @@ class FacteursPremiersTest {
 
     @Test
     void generate_de_6_devrait_retourner_2_3() {
+        // GIVEN
         // WHEN
         List<Integer> facteurs = facteursPremiers.generate(6);
 
         // THEN
         assertThat(facteurs).containsExactly(2, 3);
+    }
+
+    @Test
+    void generate_de_8_devrait_retourner_2_2_2() {
+        // GIVEN
+        // WHEN
+        List<Integer> facteurs = facteursPremiers.generate(8);
+
+        // THEN
+        assertThat(facteurs).containsExactly(2, 2, 2);
     }
 }
