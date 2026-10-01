@@ -7,6 +7,12 @@ public class ArabicRomanNumerals {
     }
 
     public static String convert(int nbr) {
-        return "I";
+        StringBuilder romain = new StringBuilder();
+        int reste = nbr;
+        while (reste >= 1) {
+            romain.append("I");
+            reste -= 1;
+        }
+        return romain.toString();
     }
 }
