@@ -2,6 +2,9 @@ package com.erwan.chiffresRomains;
 
 public class ArabicRomanNumerals {
 
+    private static final int[] VALEURS = {10, 9, 5, 4, 1};
+    private static final String[] SYMBOLES = {"X", "IX", "V", "IV", "I"};
+
     private ArabicRomanNumerals() {
         // Classe utilitaire : pas d'instanciation
     }
@@ -9,25 +12,11 @@ public class ArabicRomanNumerals {
     public static String convert(int nbr) {
         StringBuilder romain = new StringBuilder();
         int reste = nbr;
-        while (reste >= 10) {
-            romain.append("X");
-            reste -= 10;
-        }
-        if (reste >= 9) {
-            romain.append("IX");
-            reste -= 9;
-        }
-        if (reste >= 5) {
-            romain.append("V");
-            reste -= 5;
-        }
-        if (reste >= 4) {
-            romain.append("IV");
-            reste -= 4;
-        }
-        while (reste >= 1) {
-            romain.append("I");
-            reste -= 1;
+        for (int i = 0; i < VALEURS.length; i++) {
+            while (reste >= VALEURS[i]) {
+                romain.append(SYMBOLES[i]);
+                reste -= VALEURS[i];
+            }
         }
         return romain.toString();
     }
