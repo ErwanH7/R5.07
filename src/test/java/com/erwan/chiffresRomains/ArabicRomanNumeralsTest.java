@@ -32,4 +32,16 @@ class ArabicRomanNumeralsTest {
         // THEN
         assertThat(romain).isEqualTo("II");
     }
+
+    @Test
+    void convert_3_devrait_retourner_III() {
+        // GIVEN
+        int nombre = 3;
+
+        // WHEN
+        String romain = ArabicRomanNumerals.convert(nombre);
+
+        // THEN
+        assertThat(romain).isEqualTo("III");
+    }
 }
