@@ -6,7 +6,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class FacteursPremiersTest {
+class testFacteursPremiers {
 
     @Test
     void generate_de_1_devrait_retourner_une_liste_vide() {
