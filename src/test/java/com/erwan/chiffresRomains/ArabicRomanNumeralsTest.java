@@ -56,4 +56,16 @@ class ArabicRomanNumeralsTest {
         // THEN
         assertThat(romain).isEqualTo("IV");
     }
+
+    @Test
+    void convert_5_devrait_retourner_V() {
+        // GIVEN
+        int nombre = 5;
+
+        // WHEN
+        String romain = ArabicRomanNumerals.convert(nombre);
+
+        // THEN
+        assertThat(romain).isEqualTo("V");
+    }
 }
