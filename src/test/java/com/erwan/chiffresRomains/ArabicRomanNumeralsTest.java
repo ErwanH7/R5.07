@@ -104,4 +104,16 @@ class ArabicRomanNumeralsTest {
         // THEN
         assertThat(romain).isEqualTo("X");
     }
+
+    @Test
+    void convert_20_devrait_retourner_XX() {
+        // GIVEN
+        int nombre = 20;
+
+        // WHEN
+        String romain = ArabicRomanNumerals.convert(nombre);
+
+        // THEN
+        assertThat(romain).isEqualTo("XX");
+    }
 }
