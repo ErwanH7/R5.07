@@ -9,6 +9,10 @@ public class ArabicRomanNumerals {
     public static String convert(int nbr) {
         StringBuilder romain = new StringBuilder();
         int reste = nbr;
+        if (reste >= 9) {
+            romain.append("IX");
+            reste -= 9;
+        }
         if (reste >= 5) {
             romain.append("V");
             reste -= 5;

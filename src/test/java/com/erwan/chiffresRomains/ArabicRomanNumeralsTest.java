@@ -80,4 +80,16 @@ class ArabicRomanNumeralsTest {
         // THEN
         assertThat(romain).isEqualTo("VI");
     }
+
+    @Test
+    void convert_9_devrait_retourner_IX() {
+        // GIVEN
+        int nombre = 9;
+
+        // WHEN
+        String romain = ArabicRomanNumerals.convert(nombre);
+
+        // THEN
+        assertThat(romain).isEqualTo("IX");
+    }
 }
