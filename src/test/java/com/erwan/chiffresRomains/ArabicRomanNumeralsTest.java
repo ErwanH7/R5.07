@@ -2,6 +2,7 @@ package com.erwan.chiffresRomains;
 
 import com.erwan.facteursPremiers.facteursPremiers;
 import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.util.List;
 
@@ -163,5 +164,27 @@ class ArabicRomanNumeralsTest {
 
         // THEN
         assertThat(romain).isEqualTo("XLIX");
+    }
+
+    @Test
+    void convert_0_devrait_lever_une_exception() {
+        // GIVEN
+        int nombre = 0;
+
+        // WHEN / THEN
+        assertThatThrownBy(() -> ArabicRomanNumerals.convert(nombre))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Le nombre doit être compris entre 1 et 50");
+    }
+
+    @Test
+    void convert_51_devrait_lever_une_exception() {
+        // GIVEN
+        int nombre = 51;
+
+        // WHEN / THEN
+        assertThatThrownBy(() -> ArabicRomanNumerals.convert(nombre))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Le nombre doit être compris entre 1 et 50");
     }
 }
