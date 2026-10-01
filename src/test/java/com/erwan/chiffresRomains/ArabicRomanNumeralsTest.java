@@ -44,4 +44,16 @@ class ArabicRomanNumeralsTest {
         // THEN
         assertThat(romain).isEqualTo("III");
     }
+
+    @Test
+    void convert_4_devrait_retourner_IV() {
+        // GIVEN
+        int nombre = 4;
+
+        // WHEN
+        String romain = ArabicRomanNumerals.convert(nombre);
+
+        // THEN
+        assertThat(romain).isEqualTo("IV");
+    }
 }
